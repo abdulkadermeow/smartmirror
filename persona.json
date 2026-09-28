@@ -3,7 +3,7 @@
   "tone": "playful",
   "voice_id": "ar_JO-kareem-medium",
   "use_llm": true,
-  "llm_model": "qwen2.5:0.5b-instruct-q4_K_M",
+  "llm_model": "qwen2.5:3b-instruct-q4_K_M",
   "theme": {
     "accent": "#d4a574",
     "background": "#000000",
