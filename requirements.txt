@@ -1,0 +1,6 @@
+opencv-python
+ultralytics
+flask
+numpy
+scikit-learn
+pyttsx3
