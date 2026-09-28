@@ -35,7 +35,7 @@ python main.py
 ## التشغيل على Raspberry Pi
 
 ```bash
-bash setup.sh          # مرة واحدة فقط: يثبّت كل شيء تلقائياً
+bash setup.sh        
 source ~/mirror-env/bin/activate
 python main.py
 ```
