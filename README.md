@@ -31,9 +31,10 @@ smart-mirror/
 تشغيل على ويندوز 
 
 ```powershell
-setup_windows.bat
-run_windows.bat
-```
+python -m venv mirror-env
+.\mirror-env\Scripts\Activate.ps1
+pip install -r requirements.txt
+python main.py
 `http://localhost:5000`
 
  التشغيل على Raspberry Pi
