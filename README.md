@@ -37,13 +37,7 @@ pip install -r requirements.txt
 python main.py
 `http://localhost:5000`
 
- التشغيل على Raspberry Pi
 
-```bash
-bash setup.sh
-source ~/mirror-env/bin/activate
-python main.py
-```
 
 ثبّت Ollama ثم نزّل النموذج:
 
