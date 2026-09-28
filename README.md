@@ -46,6 +46,10 @@ ollama pull qwen2.5:1.5b-instruct-q4_K_M
 ``` 
 نفتح ملف البيرسونا ونتاكد من المودل ونحط اسمو عند llm
 `persona.json` `"use_llm": true`
- لوحة التحكم
+
+
+
+
+لوحة التحكم
 
 `http://localhost:5000/admin` `admin123`، غيّرها من `config.py`)
