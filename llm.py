@@ -3,7 +3,7 @@ import urllib.request
 from persona import load_persona
 
 OLLAMA_URL = "http://localhost:11434/api/generate"
-TIMEOUT = 20  # ثانية
+TIMEOUT = 20  
 
 PROMPT_TEMPLATE = """أنت مراية ذكية في {brand}. نبرتك {tone_desc}.
 شخص واقف قدامك وإطلالته: القطعة الفوقانية {top}، القطعة التحتانية {bottom}، الحذاء {shoes}.
@@ -24,10 +24,7 @@ STATUS_DESC = {
 }
 
 def generate(result):
-    """
-    توليد نصيحة عبر مودل محلي. بيرجّع None إذا المودل مش شغال
-    (ساعتها main.py بيرجع للقوالب تلقائياً).
-    """
+    
     persona = load_persona()
     if not persona.get("use_llm"):
         return None
