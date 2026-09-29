@@ -31,18 +31,13 @@ smart-mirror/
 تشغيل على ويندوز 
 
 ```powershell
-setup_windows.bat
-run_windows.bat
-```
+python -m venv mirror-env
+.\mirror-env\Scripts\Activate.ps1
+pip install -r requirements.txt
+python main.py
 `http://localhost:5000`
 
- التشغيل على Raspberry Pi
 
-```bash
-bash setup.sh
-source ~/mirror-env/bin/activate
-python main.py
-```
 
 ثبّت Ollama ثم نزّل النموذج:
 
@@ -51,6 +46,10 @@ ollama pull qwen2.5:1.5b-instruct-q4_K_M
 ``` 
 نفتح ملف البيرسونا ونتاكد من المودل ونحط اسمو عند llm
 `persona.json` `"use_llm": true`
- لوحة التحكم
+
+
+
+
+لوحة التحكم
 
 `http://localhost:5000/admin` `admin123`، غيّرها من `config.py`)
