@@ -5,8 +5,8 @@ from collections import deque
 
 PERSONA_PATH = os.path.join(os.path.dirname(__file__), "persona.json")
 _cache = {"data": None, "mtime": 0}
-_recent = {}          # لكل حالة: آخر القوالب المستخدمة حتى ما يتكرروا
-RECENT_MEMORY = 3     # كم رد أخير نتجنب تكراره
+_recent = {}            
+RECENT_MEMORY = 3     
 
 def load_persona():
     mtime = os.path.getmtime(PERSONA_PATH)
@@ -17,7 +17,7 @@ def load_persona():
     return _cache["data"]
 
 def _pick(status_key, templates):
-    """اختيار قالب عشوائي مع تجنب آخر القوالب المستخدمة لنفس الحالة"""
+   
     if isinstance(templates, str):
         templates = [templates]
     used = _recent.setdefault(status_key, deque(maxlen=RECENT_MEMORY))
@@ -29,7 +29,7 @@ def _pick(status_key, templates):
     return choice
 
 def render(result):
-    """تحويل النتيجة الخام لنص نهائي بأسلوب الشخصية مع تنويع الردود"""
+    
     persona = load_persona()
     t = persona["templates"]
     top, bottom, shoes = result["top"], result["bottom"], result["shoes"]
