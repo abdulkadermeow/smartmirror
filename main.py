@@ -66,7 +66,6 @@ def main():
 
             time.sleep(0.2)
         except Exception as e:
-            # أي خطأ غير متوقع لا يوقف المراية
             log.error("خطأ غير متوقع: %s", e)
             time.sleep(1)
 
