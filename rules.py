@@ -1,4 +1,3 @@
-# قواعد التنسيق: ترجّع نتيجة خام فقط، الصياغة صارت مسؤولية persona.py
 
 NEUTRALS = {"أسود", "أبيض", "رمادي فاتح", "رمادي غامق", "بيج", "كحلي"}
 
@@ -26,7 +25,7 @@ def _pair_ok(a, b):
     return b in MATCHES.get(a, [])
 
 def evaluate(top, bottom, shoes=None):
-    """تقييم التناسق وإرجاع نتيجة خام بدون أي صياغة"""
+    
     result = {
         "top": top, "bottom": bottom, "shoes": shoes,
         "status": None, "suggestion": None, "shoes_ok": None,
