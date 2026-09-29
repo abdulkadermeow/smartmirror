@@ -8,11 +8,11 @@ PIPER_BIN = os.path.expanduser("~/piper/piper")
 PIPER_MODEL = os.path.expanduser("~/piper/ar_JO-kareem-medium.onnx")
 OUT_WAV = "/tmp/advice.wav"
 
-# صوت أردني من مايكروسوفت: ذكر ar-JO-TaimNeural / أنثى ar-JO-SanaNeural
+
 JO_VOICE = "ar-JO-TaimNeural"
 
 def _speak_windows(text):
-    """نطق على ويندوز بصوت أردني عبر edge-tts، مع رجوع لأصوات النظام عند الفشل"""
+  
     try:
         import edge_tts
         mp3_path = os.path.join(tempfile.gettempdir(), "advice.mp3")
@@ -41,7 +41,7 @@ def _speak_windows(text):
         engine.stop()
 
 def _speak_linux(text):
-    """نطق على لينكس/راسبيري عبر Piper بصوت أردني (ar_JO-kareem)"""
+    
     with open("/tmp/advice.txt", "w", encoding="utf-8") as f:
         f.write(text)
     subprocess.run(
